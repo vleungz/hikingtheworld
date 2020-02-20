@@ -13,16 +13,6 @@
 	color:orange;
 }
 
-.row.no-gutter {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.row.no-gutter [class*='col-']:not(:first-child),
-.row.no-gutter [class*='col-']:not(:last-child) {
-  padding-right: 2px;
-  padding-left: 2px;
-}
 
 #delete-form{
 	display:inline;
