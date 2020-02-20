@@ -1,0 +1,145 @@
+.thumbnail img {
+	width:100%;
+}
+
+.thumbnail{
+	padding: 0;
+	margin: 3% 0;
+	background-color: rgba(33,33,33, 0.8);
+	border-color:transparent;
+}
+
+.checked{
+	color:orange;
+}
+
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+#delete-form{
+	display:inline;
+}
+
+.delete-form{
+	display:inline;
+}
+
+/* google maps */
+
+#map{
+	height:400px;
+	width:100%;
+}
+
+.container.main{
+	margin-top: 7.0em;
+}
+
+.box{
+	margin: 1px;
+	color:rgb(216,216,216);
+}
+
+#country{
+	color:rgb(150,150,150);
+}
+
+.info{
+	margin-bottom:3px;
+}
+
+.name{
+	font-size:20px;
+}
+
+.jumbotron {
+   background: rgba(229,229,229, 0.7); 
+}
+
+.jumbotron p.size {
+	font-size: 16px;
+	text-align: center;
+}
+
+hr{
+	padding-bottom: 10px;
+}
+
+.lead{
+	color: rgb(115, 115, 115);
+}
+
+.show{
+	color:white;
+}
+
+h4 .button-line{
+	display: inline-block;
+	float: right;
+}
+
+body { 
+    background: url("https://images.unsplash.com/photo-1424169292451-7c28a6053189?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#signup{
+	text-align:center;
+}
+
+.info .description{
+	font-size:14px;
+	padding-left:15px;
+	padding-right:15px;
+	padding-bottom:0px;
+}
+
+.info .info-title{
+	margin: 25px 0 15px;
+	padding-top:15px;
+    font-size: 16px;
+    letter-spacing: -.5px;
+    text-align:center;
+    /* font-weight: 600px; */
+}
+
+.info{
+	display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align:center;
+} 
+
+.img{
+	width:306px;
+	height:123px; 
+  	max-width: 100%;
+  	height: auto;
+}
+
+.about{
+	text-align:center;
+}
+
+.link{
+	color:rgb(56, 56, 56);
+	font-size: 17px;
+}
+
+.blurb{
+	margin-bottom: 20px;
+}

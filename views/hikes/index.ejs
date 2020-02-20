@@ -1,0 +1,31 @@
+<%- include("../partials/header") %>
+
+	<header class="jumbotron">
+		<div class="container">
+			<h1 class="about">
+				<i class="fas fa-hiking"></i> Hiking the World
+			</h1>
+			<p class="about">
+				Take a walk on the wild side! 
+			</p>
+			<p class="about">
+				<a class ="btn btn-warning btn-lrg" href="/hikes/new">Add New Hike</a>
+			</p>
+		</div>
+	</header>
+
+	<div class="row no-gutter text-center" style="display:flex; flex-wrap:wrap;">
+		<% hikes.forEach(function(hike){ %>
+		<div class="col-md-3 col-sm-6"> 
+			<div class="thumbnail">
+				<a href="/hikes/<%= hike._id %>"><img src=" <%= hike.image %>"></a>
+				<div class="caption">
+					<a href="/hikes/<%= hike._id %>" class ="name box"><%= hike.name %></a>
+					<h6 class ="box" id="country"><%= hike.country %></h6>
+				</div>
+			</div>	
+		</div>
+	<% }) %>
+	</div>
+
+<%- include("../partials/footer") %>

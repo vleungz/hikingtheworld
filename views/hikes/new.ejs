@@ -1,0 +1,39 @@
+<%- include("../partials/header") %>
+
+<div class="ui main text container segment">
+	<div class="ui huge header">New Hike</div>
+		<form class ="ui form" action ="/hikes" method="POST">
+			<div class="field">
+				<label>Name</label>
+				<input type="text" name="name" placeholder="Everest Base Camp">
+			</div>
+			<div class="field">
+				<label>Country</label>
+				<input type="text" name="country" placeholder="Nepal">
+			</div>
+			<div class ="field">
+				<label>Location</label>
+				<input type="text" name="location" placeholder="Mount Everest">
+			</div>
+			<div class ="field">
+				<label>Image URL</label>
+				<input type="text" name="image" placeholder="https://images.unsplash.com/photo-1484353890732-25113ccdd04f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+			</div>
+			<div class ="field">
+				<label>Rating (between 1 and 5)</label>
+				<input type="number" name="rating" placeholder="5" min="1" max ="5" step="1">
+			</div>
+			<div class ="field">
+				<label>Link for more information</label>
+				<input type="text" name="info" placeholder="https://www.mounteverest.net/expguide/route.htm">
+			</div>
+			<div class="field">
+				<label>Description</label>
+				<textarea type="text" name="description" placeholder="I conquered Mount Everest!!!"></textarea>
+			</div>
+			<input class="ui blue basic button" type="submit">
+			<a href="/hikes" class="ui red basic button">Cancel</a>
+		</form>
+</div>
+
+<%- include("../partials/footer") %>
