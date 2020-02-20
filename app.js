@@ -1,6 +1,8 @@
 require('dotenv').config({path: __dirname + '/.env'});
 
 var express = require("express"),
+	session = require('express-session'),
+	MemoryStore = require('memorystore')(session),
 	app = express(),
 	bodyParser = require("body-parser"),
 	mongoose = require("mongoose"),
@@ -39,11 +41,28 @@ app.use(flash());
 
 //Passport config
 
-app.use(require("express-session")({
-	secret:"masha is cute",
-	resave: false,
-	saveUninitialized: false
-}));
+app.set('trust proxy', 1);
+
+app.use(session({
+    cookie: { maxAge: 86400000 },
+    store: new MemoryStore({
+      checkPeriod: 86400000 // prune expired entries every 24h
+    }),
+    secret: 'keyboard cat'
+}))
+
+app.use(function(req,res,next){
+if(!req.session){
+    return next(new Error('Oh no')) //handle error
+}
+next() //otherwise continue
+});
+
+// app.use(require("express-session")({
+// 	secret:"masha is cute",
+// 	resave: false,
+// 	saveUninitialized: false
+// }));
 
 app.use(passport.initialize());
 app.use(passport.session());
