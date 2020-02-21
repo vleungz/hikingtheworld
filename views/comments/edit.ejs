@@ -1,13 +1,13 @@
 <%- include("../partials/header") %>
 
-<div class="ui main text container">
+<div class="about ui main text container">
 	<div class="ui huge header">Edit Comment</div>
 			<form class="ui form" action="/hikes/<%= hike_id %>/comments/<%= comment._id%>?_method=PUT" method="POST">			
 				<div class="field">
 					<textarea name="comment[text]"><%=comment.text%></textarea>
 				</div>
-			<input class="ui blue basic button" type="submit">
-			<a href="/hikes/<%=hike_id%>" class="ui red basic button">Cancel</a>
+			<input class="ui teal button" type="submit">
+			<a href="/hikes/<%=hike_id%>" class="ui orange button">Cancel</a>
 		</form>
 </div>
 
